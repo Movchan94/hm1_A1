@@ -6,43 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-	<script>
+<script>
 	var inc = prompt("Enter your annual income:");
 			
-
 	if(inc<=9525){
 		var tax = inc*0.10;
 		
 	
 	}else if (inc<=38700){
-		var tax = (inc*0.12)+952.5;
+		tax = 952.5+(inc-9525)*0.12;
 	
 	
 	}else if (inc<=82500){
-		var tax = (inc*0.22)+4453.5;
+		tax = 4453.5+(inc-38700)*0.22;
 	
 	
 	}else if (inc<=157500){
-		var tax = (inc*0.24)+14089.5;
+		tax = 14089.5+(inc-82500)*0.24;
 	
 	
 	}else if (inc<=200000){
-		var tax = (inc*0.32)+32089.5;
+		tax = 32089.5+(inc-157500)*0.32;
 	
 	
 	}else if (inc<=500000){
-		var tax = (inc*0.35)+45689.5;
+		tax = 45689.5+(inc-200000)*0.35;
 	
 	
 	}else if (inc>=500001){
-		var tax = (inc*0.37)+150689.5;
-
+		tax = 150689.5+(inc-500000)*0.37;
 	}
 	
 	
 	console.log("TAX:"+tax);	
 	alert("Your tax: "+tax);
-
 	
 	
 </script>
